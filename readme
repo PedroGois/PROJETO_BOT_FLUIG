@@ -9,6 +9,8 @@ Este projeto tem como objetivo consumir dados do Fluig e enviar um primeiro cont
 - Extrair informações de solicitações no Fluig (nome do solicitante, telefone de contato, descrição da solicitação e outros metadados relevantes).
 - Enviar uma mensagem inicial automática pelo WhatsApp para o número de telefone do solicitante, apresentando o atendimento e confirmando o recebimento da solicitação.
 
+_futuramente chegar nos agentes de IA para interpretar as descrições e iniciar conversas_
+
 ## Como funciona (visão geral)
 
 1. O bot consulta a API do Fluig ou consome os dados exportados pelo Fluig.
