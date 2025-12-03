@@ -1,0 +1,51 @@
+# PROJETO BOT FLUIG
+
+## Sobre
+
+Este projeto tem como objetivo consumir dados do Fluig e enviar um primeiro contato aos usuários solicitantes via WhatsApp, utilizando o telefone de contato informado no Fluig.
+
+## Objetivo
+
+- Extrair informações de solicitações no Fluig (nome do solicitante, telefone de contato, descrição da solicitação e outros metadados relevantes).
+- Enviar uma mensagem inicial automática pelo WhatsApp para o número de telefone do solicitante, apresentando o atendimento e confirmando o recebimento da solicitação.
+
+## Como funciona (visão geral)
+
+1. O bot consulta a API do Fluig ou consome os dados exportados pelo Fluig.
+2. Filtra/valida as solicitações que precisam de contato inicial.
+3. Para cada solicitante com telefone válido, o bot monta uma mensagem padrão (personalizável) de primeiro contato.
+4. O bot envia a mensagem via integração com um provedor de WhatsApp (API oficial, provedor terceirizado ou gateway) usando o telefone informado.
+5. Registra o envio e atualiza o status da solicitação no Fluig (ou em log local) para evitar reenvios.
+
+## Arquivos principais
+
+- `APP.PY` : ponto de entrada do bot e lógica principal.
+- `CONFIG.PY` : configurações de integração (credenciais do Fluig, credenciais do WhatsApp, templates de mensagem, opções de envio).
+- `REQUIREMENTS.TXT` : dependências Python necessárias.
+- `readme` : documento atual (esta versão em markdown).
+
+## Requisitos e pontos de atenção
+
+- Credenciais seguras para acessar a API do Fluig.
+- Conta/API para envio de mensagens WhatsApp (respeitar termos de uso).
+- Validação de número de telefone (formato internacional quando necessário).
+- Mecanismo para evitar mensagens duplicadas (logs ou marcação no Fluig).
+- Tratamento de erros e tentativas/retries para envios que falharem.
+
+## Segurança e privacidade
+
+- Os dados de contato são sensíveis — armazenar e transportar de forma segura (criptografia, acesso restrito).
+- Seguir a legislação aplicável (LGPD) ao processar dados pessoais.
+
+## Como rodar (rápido)
+
+1. Instale dependências: `pip install -r REQUIREMENTS.TXT`.
+2. Configure `CONFIG.PY` com as credenciais do Fluig e do serviço de WhatsApp.
+3. Execute: `python APP.PY`.
+
+## Personalização
+
+- Mensagens podem ser parametrizadas por template para incluir nome, número da solicitação, e instruções iniciais.
+- Estratégia de fila e retry configurável em `CONFIG.PY`.
+
+
