@@ -1,7 +1,7 @@
 FLUIG_BASE_URL = "https://teste/api/public/ecm/"
 FLUIG_DATASET_ID = "ds_chamados"  # <- peça isso para o Leandro
 
-FLUIG_USER = "seu_usuario_aqui"
+FLUIG_USER = "testeuser"
 FLUIG_PASS = "sua_senha_aqui"
 
 TEAMS_WEBHOOK_URL = "https://seu_webhook_do_teams"
