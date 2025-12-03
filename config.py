@@ -13,5 +13,5 @@ KEYWORDS = {
     "senha": "Reset de Senha",
     "impressora": "Falha em Impressão",
     "vpn": "Problema com VPN",
-    "internet": "Queda de Internet"
+    "internet": "Queda de Internet!"
 }
