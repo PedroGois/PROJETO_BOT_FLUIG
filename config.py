@@ -1,4 +1,4 @@
-FLUIG_BASE_URL = "https://SEU_FLUIG/api/public/ecm/"
+FLUIG_BASE_URL = "https://testeeaaae/api/public/ecm/"
 FLUIG_DATASET_ID = "ds_chamados"  # <- peça isso para o Leandro
 
 FLUIG_USER = "seu_usuario_aqui"
